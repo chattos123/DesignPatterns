@@ -1,0 +1,49 @@
+﻿## singleton
+
+Intent: Ensure a class has only one instance and provide a global point of access to it.
+When to use: Use when exactly one object is needed to coordinate actions across the system (e.g., logging, configuration, shared resource manager).
+Key points:
+- Control instance creation and provide lazy initialization if needed.
+- Be careful with multithreading: prefer thread-safe implementations.
+- Avoid overuse — singletons are effectively global state.
+
+## AbstractFactory
+
+Intent: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+When to use: Use when your code needs to work with various families of related products and you want to isolate the creation logic.
+Key points:
+- Define abstract factory interface and concrete factory implementations.
+- Factories return abstract product interfaces.
+- Allows swapping entire product families easily.
+
+## Builder
+
+Intent: Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+When to use: Use when creating complex objects step by step and the construction process must allow different representations.
+Key points:
+- Use a Director to orchestrate building steps or let clients call steps directly.
+- Builder accumulates state and returns final product with Build/BuildAsync method.
+
+## Factory
+
+Intent: Define an interface for creating an object, but let subclasses decide which class to instantiate. Often implemented as Factory Method or Simple Factory.
+When to use: Use when a class can't anticipate the class of objects it must create or wants subclasses to specify created objects.
+Key points:
+- Keeps creation logic in one place.
+- Promotes loose coupling between creator and concrete product classes.
+
+## Prototype
+
+Intent: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+When to use: Use when object creation is expensive or when you want to produce objects by cloning existing instances with modifications.
+Key points:
+- Implement cloning (shallow or deep) carefully.
+- Useful for runtime configuration of objects.
+
+## Adapter
+
+Intent: Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+When to use: Use when you need to use existing classes but their interfaces do not match the one you need.
+Key points:
+- Adapter wraps an existing object and translates calls between client and adaptee.
+- Can be object adapter (composition) or class adapter (inheritance where supported).

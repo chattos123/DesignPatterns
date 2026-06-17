@@ -1,0 +1,5 @@
+{
+  "Prefix": "[LOG]",
+  "IncludeTimestamp": true,
+  "OutputFile": "Samplelog.txt"
+}

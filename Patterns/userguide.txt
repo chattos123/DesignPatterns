@@ -1,0 +1,14 @@
+# help
+Displays this help information and the available commands.
+
+Commands:
+ - help, guide, userguide, docs : Show the table of contents for this user guide.
+ - <section> : Print the detailed user guide for the named section (for example: `singleton`, `factory`, or `build`).
+
+Examples:
+ - `DesignPatternsPrinciples.exe help`      => Shows available sections.
+ - `DesignPatternsPrinciples.exe singleton` => Prints the singleton section text.
+
+Notes:
+ - Sections are defined by headings that start with `# ` followed by the section name.
+ - Section lookup is case-insensitive.
