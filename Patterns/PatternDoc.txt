@@ -46,4 +46,4 @@ Intent: Convert the interface of a class into another interface clients expect. 
 When to use: Use when you need to use existing classes but their interfaces do not match the one you need.
 Key points:
 - Adapter wraps an existing object and translates calls between client and adaptee.
-- Can be object adapter (composition) or class adapter (inheritance where supported).
+- Can be object adapter (composition) or class adapter (inheritance where supported).<Test>

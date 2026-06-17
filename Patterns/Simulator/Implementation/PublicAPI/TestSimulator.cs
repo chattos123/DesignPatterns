@@ -98,7 +98,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
             var result = new Dictionary<string, string>();
 
             // Look for the userguide file in the app base directory
-            var path = Path.Combine(System.AppContext.BaseDirectory, GuideFileName);
+            var path = Path.Combine(System.AppContext.BaseDirectory,GuideFileName);
+
             if (!File.Exists(path))
             {
                 return result;

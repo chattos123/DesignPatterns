@@ -17,7 +17,7 @@ namespace DesignPatternsPrinciples.Code
 
         public UserGuide()
         {
-            _path = Path.Combine(AppContext.BaseDirectory, "Patterns\\userguide.txt");
+            _path = Path.Combine(AppContext.BaseDirectory, "userguide.txt");
         }
 
         public void EnsureUserGuideExists()

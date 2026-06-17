@@ -13,12 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="PatternDoc.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Support\PatternDoc.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+
   </ItemGroup>
 
 </Project>
