@@ -39,7 +39,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 new BuilderSimulator(),
                 new FactorySimulator(),
                 new PrototypeSimulator(),
-                new AdapterSimulator()
+                new AdapterSimulator(),
+                new BridgeSimulator()
             };
 
             foreach (var s in sims)
@@ -61,6 +62,7 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "factory" or "fact" or "factorypattern" => new FactorySimulator(),
                 "prototype" or "proto" => new PrototypeSimulator(),
                 "adapter" => new AdapterSimulator(),
+                "bridge" => new BridgeSimulator(),
                 _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, all.", nameof(key))
             };
         }
