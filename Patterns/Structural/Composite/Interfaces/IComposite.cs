@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Patterns.Structural.Composite.Interfaces
 {
@@ -11,5 +8,6 @@ namespace Patterns.Structural.Composite.Interfaces
     {
         void Add(IComponent c); 
         void Remove(IComponent c);
+        IReadOnlyList<IComponent> GetChildren();
     }
 }
