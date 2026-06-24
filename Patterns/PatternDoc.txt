@@ -51,3 +51,14 @@ Key points:
 ## Bridge
 Intent: Decouple an abstraction from its implementation so that the two can vary independently.
 When to use: Use when you want to avoid a permanent binding between an abstraction and its implementation, or when both the abstraction and implementation should be extensible by subclassing.
+Key points:
+- Separate abstraction and implementation into different class hierarchies.
+- Use composition to link abstraction with implementation.
+
+## Composite
+Intent: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+When to use: Use when you want to represent a hierarchy of objects and treat individual objects and compositions uniformly.
+Key points:
+- Define a common interface for both leaf and composite objects.
+- Composite objects can contain other composites or leaf objects.
+- Clients interact with objects through the common interface, treating all objects uniformly.

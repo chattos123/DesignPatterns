@@ -1,0 +1,111 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="TJkbuI5Jf43k7T2bRpDe">
+    <mxGraphModel dx="1636" dy="1616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="41" y="122" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-3" value="&lt;b&gt;&lt;i&gt;IComponent&lt;/i&gt;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="122" width="200" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-4" value="+ Operation: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-3">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-6" value="+ Add: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-3">
+          <mxGeometry y="52" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-7" value="&lt;b&gt;Leaf&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="181" y="320" width="140" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-8" value="+ Operation: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-7">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-9" value="+ Add: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-7">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-11" value="&lt;b&gt;Composite&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="320" width="140" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-23" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="ANI1TH_7SKkldHsHBK8A-11" target="ANI1TH_7SKkldHsHBK8A-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="20" as="sourcePoint" />
+            <mxPoint x="200" y="-180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="20" />
+              <mxPoint x="200" y="21" />
+              <mxPoint x="201" y="21" />
+              <mxPoint x="201" y="-178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-24" value="0..n" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-23">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-25" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" connectable="0" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-23">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-12" value="+ Operation: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-11">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-13" value="+ Add: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ANI1TH_7SKkldHsHBK8A-11">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-14" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.412;exitY=-0.026;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ANI1TH_7SKkldHsHBK8A-7" target="ANI1TH_7SKkldHsHBK8A-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="210" y="270" as="sourcePoint" />
+            <mxPoint x="370" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="260" />
+              <mxPoint x="380" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-15" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.66;entryY=1.026;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ANI1TH_7SKkldHsHBK8A-11" target="ANI1TH_7SKkldHsHBK8A-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="580" y="260" as="sourcePoint" />
+            <mxPoint x="740" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="260" />
+              <mxPoint x="412" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-16" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ANI1TH_7SKkldHsHBK8A-1" target="ANI1TH_7SKkldHsHBK8A-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="180" y="150" as="sourcePoint" />
+            <mxPoint x="340" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-26" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="380" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.981;exitY=0.231;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ANI1TH_7SKkldHsHBK8A-12" target="ANI1TH_7SKkldHsHBK8A-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="520" as="sourcePoint" />
+            <mxPoint x="560" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-28" value="for each IComponent" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="420" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-29" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;represents leaf objects in the composition. A leaf has no children.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;defines behavior for primitive objects in the composition.&lt;/span&gt;.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-30" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;defines behavior for components having children.&lt;/p&gt;&lt;p&gt;stores child components.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;implements child-related operations in the Component interface&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="360" y="398" width="180" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-31" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;manipulates objects in the composition through the Component interface&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="170" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;declares the interface for objects in the composition.&lt;/p&gt;&lt;p&gt;implements default behavior for the interface common to all classes, as appropriate.&lt;/p&gt;&lt;p&gt;declares an interface for accessing and managing its child components.&lt;/p&gt;&lt;p&gt;(optional) defines an interface for accessing a component&#39;s parent in the recursive structure, and implements it if that&#39;s appropriate&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-150" width="180" height="272" as="geometry" />
+        </mxCell>
+        <mxCell id="ANI1TH_7SKkldHsHBK8A-33" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Composite Pattern&lt;/h1&gt;&lt;p&gt;The Composite design pattern composes objects into tree structures to represent part-whole hierarchies. This pattern lets clients treat individual objects and compositions of objects uniformly&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="-130" width="280" height="190" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
