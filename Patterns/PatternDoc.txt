@@ -70,3 +70,11 @@ Key points:
 - Decorators wrap an existing object and provide additional behavior.
 - Can be combined in various ways to create complex behavior dynamically.
 - Promotes code reuse and adherence to the Open/Closed Principle.
+
+## Observer
+Intent: Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+When to use: Use when an object should notify other objects without making assumptions about who these objects are.
+Key points:
+- Observers register with a subject to receive updates.
+- Subject maintains a list of observers and notifies them of state changes.
+- Promotes loose coupling between subject and observers.

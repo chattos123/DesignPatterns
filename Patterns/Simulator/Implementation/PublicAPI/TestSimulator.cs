@@ -65,7 +65,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "bridge" => new BridgeSimulator(),
                 "composite" or "comp" or "compositepattern" => new CompositeSimulator(),
                 "decorator" or "deco" or "decoratorpattern" => new DecoratorSimulator(),
-                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, all.", nameof(key))
+                "observer" or "obs" or "observerpattern" => new ObserverSimulator(),
+                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, all.", nameof(key))
             };
         }
 

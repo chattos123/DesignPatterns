@@ -4,7 +4,7 @@ using Patterns.Simulator.Interface;
 using Patterns.Structural.Decorator.Interface;
 using Patterns.Structural.Decorator.Implementation;
 
-namespace Patterns.Simulator
+namespace Patterns.Simulator.Implementation
 {
     internal class DecoratorSimulator: ISimulator
     {
