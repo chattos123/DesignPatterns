@@ -27,7 +27,7 @@ namespace DesignPatternsPrinciples.Code
             // Use first argument to choose a simulator, e.g. "singleton", "factory", or "all".
             // If no argument is provided, default to "build" to preserve existing behavior.
             string? selection = args is { Length: > 0 } ? args[0] : null;
-            selection ??= "composite"; // Default selection.
+            selection ??= "decorator"; // Default selection.
 
             try
             {

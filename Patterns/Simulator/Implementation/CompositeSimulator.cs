@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using Patterns.Simulator.Interface;
-using Patterns.Structural.Composite.Interfaces;
+using Patterns.Structural.Composite.Interface;
 using Patterns.Structural.Composite.Implementation;
 
 namespace Patterns.Simulator.Implementation

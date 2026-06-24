@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Patterns.Structural.Composite.Interfaces
+namespace Patterns.Structural.Composite.Interface
 {
     internal interface IComposite: IComponent
     {

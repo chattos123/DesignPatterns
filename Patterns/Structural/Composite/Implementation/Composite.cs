@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Patterns.Structural.Composite.Interfaces;
+using Patterns.Structural.Composite.Interface;
 
 namespace Patterns.Structural.Composite.Implementation
 {

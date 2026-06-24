@@ -61,10 +61,11 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "builder" or "build" => new BuilderSimulator(),
                 "factory" or "fact" or "factorypattern" => new FactorySimulator(),
                 "prototype" or "proto" => new PrototypeSimulator(),
-                "adapter" => new AdapterSimulator(),
+                "adapter" or "adp" or "adapterpattern" => new AdapterSimulator(),
                 "bridge" => new BridgeSimulator(),
-                "composite" => new CompositeSimulator(),
-                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, all.", nameof(key))
+                "composite" or "comp" or "compositepattern" => new CompositeSimulator(),
+                "decorator" or "deco" or "decoratorpattern" => new DecoratorSimulator(),
+                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, all.", nameof(key))
             };
         }
 

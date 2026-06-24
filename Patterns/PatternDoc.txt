@@ -62,3 +62,11 @@ Key points:
 - Define a common interface for both leaf and composite objects.
 - Composite objects can contain other composites or leaf objects.
 - Clients interact with objects through the common interface, treating all objects uniformly.
+
+## Decorator
+Intent: Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+When to use: Use when you want to add behavior to individual objects without affecting other objects of the same class.
+Key points:
+- Decorators wrap an existing object and provide additional behavior.
+- Can be combined in various ways to create complex behavior dynamically.
+- Promotes code reuse and adherence to the Open/Closed Principle.
