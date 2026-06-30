@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Patterns.Creational.Singleton;
 using Patterns.Simulator.Interface;
-using Patterns.Creational.Singleton;
+using System;
+using System.Diagnostics;
 
 
 
@@ -63,7 +64,11 @@ namespace Patterns.Simulator.Implementation
             }
 
             Task.WaitAll(tasks);
+
             VerifySingleton();
+            RunBigAssetManagerTest();
+            RunThreadSafetyStressTest();
+            RunMemoryLifecycleAndRecoveryTest();
 
         }
 
@@ -113,6 +118,132 @@ namespace Patterns.Simulator.Implementation
             else
             {
                 Console.WriteLine("Different instances detected among task-obtained logger references.");
+            }
+
+            Console.WriteLine($"Total collected references: {_collected.Count}");
+        }
+
+        private static void RunBigAssetManagerTest()
+        {
+            Console.WriteLine("Simulating BigAssetManager <Holding big data in singleton using Weak Reference> usage...");
+
+            // Step 1: Access the manager and request the data for the first time
+            // This triggers the heavy disk-load simulation.
+            byte[]? standardReference = BigAssetManager.Instance.GetAssetData();
+
+            // Step 2: Use it again immediately. (Cache Hit)
+            byte[]? secondReference = BigAssetManager.Instance.GetAssetData();
+
+            // Step 3: Sever the strong reference link in your local execution block
+            standardReference = null;
+            secondReference = null;
+
+            Console.WriteLine("Strong references cleared. Inducing Garbage Collection...");
+
+            // Force GC to look at Gen 2 and Large Object Heap (LOH)
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+
+            Console.WriteLine("Garbage Collection cycle complete.");
+
+            // Step 4: Request the data again. 
+            // Because no strong references held it down, the GC successfully wiped the 500MB array.
+            // The manager automatically detects this and reloads it safely.
+            byte[] reloadedReference = BigAssetManager.Instance.GetAssetData();
+        }
+
+        /// <summary>
+        /// Verifies that multiple threads requesting the asset simultaneously 
+        /// do not cause multiple redundant disk loads due to internal locks.
+        /// </summary>
+        private static void RunThreadSafetyStressTest()
+        {
+            Console.WriteLine("[Thread Safty Test in Big Asset manager] Initiating Multi-Threaded Stress Test...");
+
+            const int concurrentTaskCount = 8;
+            Task[] tasks = new Task[concurrentTaskCount];
+
+            Stopwatch sw = Stopwatch.StartNew();
+
+            for (int i = 0; i < concurrentTaskCount; i++)
+            {
+                int taskId = i + 1;
+                tasks[i] = Task.Run(() =>
+                {
+                    // Simultaneous access point
+                    byte[] data = BigAssetManager.Instance.GetAssetData();
+
+                    // Keep a minimal assert validation to ensure data isn't corrupted
+                    if (data == null || data.Length != 500_000_000)
+                    {
+                        throw new Exception($"Thread {taskId} received an invalid buffer!");
+                    }
+                });
+            }
+
+            // Wait for all simultaneous worker threads to finish
+            Task.WaitAll(tasks);
+            sw.Stop();
+
+            Console.WriteLine($"[SUCCESS] All {concurrentTaskCount} threads completed safely.");
+            Console.WriteLine($"Total execution time for parallel load: {sw.ElapsedMilliseconds} ms");
+            Console.WriteLine("Notice that \"Reloading massive file...\" was only printed ONCE.");
+        }
+
+        /// <summary>
+        /// Confirms that cache hits function properly under strong references, 
+        /// and that the asset successfully unloads and recovers when references are dropped.
+        /// </summary>
+        private static void RunMemoryLifecycleAndRecoveryTest()
+        {
+            Console.WriteLine("[Memory Test on Big Asset Manager] Initiating Memory Lifecycle and Recovery Test...");
+
+            // 1. Establish a local strong reference to the asset
+            Console.WriteLine("\n-> Requesting asset data (Should be a CACHE HIT from previous test)...");
+            byte[]? strongRef = BigAssetManager.Instance.GetAssetData();
+
+            // 2. Validate immediate cache hit performance
+            long memBeforeGC = GC.GetTotalMemory(false) / (1024 * 1024);
+            Console.WriteLine($"Current managed memory footprint: {memBeforeGC} MB");
+
+            Console.WriteLine("\n-> Requesting asset data again with strong reference alive...");
+            byte[]? secondRef = BigAssetManager.Instance.GetAssetData();
+
+            bool referencesIdentical = ReferenceEquals(strongRef, secondRef);
+            Console.WriteLine($"Are both returned references pointing to the exact same memory array? {referencesIdentical}");
+
+            if (!referencesIdentical)
+            {
+                throw new Exception("Error: Cache returned a different reference while object was still alive!");
+            }
+
+            // 3. Sever all local strong reference hooks to the 500MB array
+            Console.WriteLine("\n-> Severing all local strong references to allow compilation collection...");
+            strongRef = null;
+            secondRef = null;
+
+            // 4. Force Garbage Collection cycles to clean up Large Object Heap (LOH)
+            Console.WriteLine("Inducing explicit Garbage Collection...");
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect(); // Second collection clears any objects promoted during finalization
+
+            long memAfterGC = GC.GetTotalMemory(true) / (1024 * 1024);
+            Console.WriteLine($"Managed memory footprint post-GC: {memAfterGC} MB");
+            Console.WriteLine("(Memory should have dropped significantly back to baseline tracking numbers)");
+
+            // 5. Request the data one final time. The manager must recover from the cache miss safely.
+            Console.WriteLine("\n-> Requesting asset data post-GC collection (Should trigger a CACHE MISS and reload)...");
+            byte[] recoveredRef = BigAssetManager.Instance.GetAssetData();
+
+            if (recoveredRef != null && recoveredRef.Length == 500_000_000)
+            {
+                Console.WriteLine("[SUCCESS] Weak reference lifecycle and recovery test passed.");
+            }
+            else
+            {
+                throw new Exception("Error: Recovered reference payload failed validation check.");
             }
         }
     }

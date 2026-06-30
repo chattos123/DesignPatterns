@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="ypYHnimFwcQy_1clmn3w">
+    <mxGraphModel dx="786" dy="516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-1" value="sealed Singleton/Logger" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="80" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-2" value="- instance: static Singleton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KddbgMC1e0UQ3pf7TUQQ-1">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="KddbgMC1e0UQ3pf7TUQQ-1">
+          <mxGeometry y="52" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-6" value="- Singleton(type):&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KddbgMC1e0UQ3pf7TUQQ-1">
+          <mxGeometry y="60" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-4" value="+ GetInstance(type): Singleton/ get instance as property" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KddbgMC1e0UQ3pf7TUQQ-1">
+          <mxGeometry y="86" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="89" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.014;entryY=0.118;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KddbgMC1e0UQ3pf7TUQQ-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="180" y="100" as="sourcePoint" />
+            <mxPoint x="340" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Key Features&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;ul style=&quot;direction:ltr;unicode-bidi:embed;margin-top:0in;&lt;br/&gt; margin-bottom:0in&quot; type=&quot;disc&quot;&gt;&lt;br&gt; &lt;li style=&quot;margin-top:0;margin-bottom:0;vertical-align:middle&quot;&gt;&lt;span style=&quot;font-weight:bold;font-family:Calibri;font-size:11.0pt&quot;&gt;Sealed Class:&lt;/span&gt;&lt;span style=&quot;font-family:Calibri;font-size:11.0pt&quot;&gt; Prevents&lt;br&gt;     subclassing, which could otherwise violate the singleton pattern.&lt;/span&gt;&lt;/li&gt;&lt;br&gt; &lt;li style=&quot;margin-top:0;margin-bottom:0;vertical-align:middle&quot;&gt;&lt;span style=&quot;font-weight:bold;font-family:Calibri;font-size:11.0pt&quot;&gt;Private Constructor:&lt;/span&gt;&lt;span style=&quot;font-family:Calibri;font-size:11.0pt&quot;&gt;&lt;br&gt;     Ensures no other part of the code can execute new Logger().&lt;/span&gt;&lt;/li&gt;&lt;br&gt; &lt;li style=&quot;margin-top:0;margin-bottom:0;vertical-align:middle&quot;&gt;&lt;span style=&quot;font-weight:bold;font-family:Calibri;font-size:11.0pt&quot;&gt;Lazy&amp;lt;Logger&amp;gt;:&lt;/span&gt;&lt;span style=&quot;font-family:Calibri;font-size:11.0pt&quot;&gt; * &lt;/span&gt;&lt;span style=&quot;font-weight:bold;font-family:Calibri;font-size:11.0pt&quot;&gt;Lazy&lt;br&gt;     Initialization:&lt;/span&gt;&lt;span style=&quot;font-family:Calibri;font-size:11.0pt&quot;&gt;&lt;br&gt;     The logger/singleton isn&#39;t created until the exact moment Logger.Instance is called&lt;br&gt;     for the first time. If your app never logs anything, it never wastes&lt;br&gt;     memory.&lt;/span&gt;&lt;/li&gt;&lt;br&gt; &lt;ul style=&quot;direction:ltr;unicode-bidi:embed;margin-top:0in;&lt;br/&gt;  margin-bottom:0in&quot; type=&quot;disc&quot;&gt;&lt;br&gt;  &lt;li style=&quot;margin-top:0;margin-bottom:0;vertical-align:middle&quot;&gt;&lt;span style=&quot;font-weight:bold;font-family:Calibri;font-size:11.0pt&quot;&gt;Thread&lt;br&gt;      Safety:&lt;/span&gt;&lt;span style=&quot;font-family:Calibri;font-size:11.0pt&quot;&gt; If&lt;br&gt;      multiple threads try to access Logger.Instance at the exact same&lt;br&gt;      millisecond, Lazy&amp;lt;T&amp;gt; guarantees that only one instance is created&lt;br&gt;      safely without complex lock blocks.&lt;/span&gt;&lt;/li&gt;&lt;br&gt; &lt;/ul&gt;&lt;br&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="550" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KddbgMC1e0UQ3pf7TUQQ-9" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Singleton CD&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="200" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

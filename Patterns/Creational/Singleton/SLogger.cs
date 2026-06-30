@@ -48,9 +48,10 @@ namespace Patterns.Creational.Singleton
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 // Swallow exceptions and use defaults
+                Console.WriteLine($"Error reading logger settings: {ex.Message}");
             }
         }
         // Public method to provide access to the single instance
