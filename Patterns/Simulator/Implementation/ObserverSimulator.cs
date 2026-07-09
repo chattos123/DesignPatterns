@@ -15,6 +15,8 @@ namespace Patterns.Simulator.Implementation
         {
             Console.WriteLine("[System] Simulating classic Observer pattern behavior"); 
             SimulateClassicBehaviour();
+            Console.WriteLine("\n\n[System] Now simulating delegate-based Observer pattern behavior");
+            SimulateDelegateBasedObserver();
             Console.WriteLine("\n\n[System] Now simulating standard .NET Observer pattern behavior");
             SimulateStandardBehaviour();
         }
@@ -39,6 +41,26 @@ namespace Patterns.Simulator.Implementation
             // Unsubscribe an observer and fire another alert
             alertGenerator.RemoveObserver(emailService);
             alertGenerator.NotifyObservers("API Gateway latency is high.", "Major");
+        }
+
+        public void SimulateDelegateBasedObserver()
+        {
+            var newsAgency = new NewsAgency();
+            newsAgency.ExamineInvokationList();
+            var subscriber1 = new Subscriber("Subscriber 1");
+            var subscriber2 = new Subscriber("Subscriber 2");
+            // Subscribe to the event
+            newsAgency.NewsPublished += subscriber1.OnNewsPublished;
+            newsAgency.ExamineInvokationList();
+            newsAgency.NewsPublished += subscriber2.OnNewsPublished;
+            newsAgency.ExamineInvokationList();
+            // Publish news
+            newsAgency.AddNews("Breaking News: Observer Pattern in Action via Events!");
+            newsAgency.AddNews("Update: Delegates make life easier!");
+            // Unsubscribe one of the subscribers
+            newsAgency.NewsPublished -= subscriber1.OnNewsPublished;
+            // Publish more news
+            newsAgency.AddNews("Final Update: Observer Pattern Demo Complete!");
         }
 
 
