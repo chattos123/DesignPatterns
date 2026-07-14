@@ -7,16 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Behavioral\ChainofResponsibility\Diagram\" />
+    <Folder Include="Behavioral\ChainofResponsibility\interface\" />
     <Folder Include="Behavioral\Command\Diagram\" />
-    <Folder Include="Behavioral\ChainofResponsibility\" />
-    <Folder Include="Behavioral\Observer\Diagran\" />
-    <Folder Include="Creational\AbstractFactory\Diagran\" />
+    <Folder Include="Behavioral\Observer\Diagram\" />
+    <Folder Include="Creational\AbstractFactory\Diagram\" />
     <Folder Include="Creational\Builder\Diagram\" />
     <Folder Include="Creational\FactoryMethod\Diagram\" />
     <Folder Include="Creational\Singleton\Settings\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Behavioral\ChainofResponsibility\Description.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Behavioral\Command\Description.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
