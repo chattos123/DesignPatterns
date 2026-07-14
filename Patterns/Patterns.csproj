@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Behavioral\Command\Diagram\" />
+    <Folder Include="Behavioral\ChainofResponsibility\" />
     <Folder Include="Behavioral\Observer\Diagran\" />
     <Folder Include="Creational\AbstractFactory\Diagran\" />
     <Folder Include="Creational\Builder\Diagram\" />
