@@ -51,12 +51,20 @@ namespace Patterns.Behavioral.Observer.Implementation.Subject
                 {
                     Console.WriteLine($"   ✅ [ACK] Alert {alertId} acknowledged by {observerName}.");
                 }
+                else
+                {
+                    Console.WriteLine($"   ⚠️  Alert {alertId} was not pending acknowledgment from {observerName}.");
+                }
 
                 if (observersPending.Count == 0)
                 {
                     Console.WriteLine($"🎉 [ALERT CLOSED] All observers acknowledged Alert {alertId}.");
                     _pendingAcks.Remove(alertId);
                 }
+            }
+            else
+            {
+                Console.WriteLine($"   ⚠️  Alert {alertId} not found in pending acknowledgments.");
             }
         }
 

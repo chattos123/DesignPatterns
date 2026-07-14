@@ -40,7 +40,11 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 new FactorySimulator(),
                 new PrototypeSimulator(),
                 new AdapterSimulator(),
-                new BridgeSimulator()
+                new BridgeSimulator(),
+                new CompositeSimulator(),
+                new DecoratorSimulator(),
+                new ObserverSimulator(),
+                new CommandSimulator()
             };
 
             foreach (var s in sims)
@@ -66,6 +70,7 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "composite" or "comp" or "compositepattern" => new CompositeSimulator(),
                 "decorator" or "deco" or "decoratorpattern" => new DecoratorSimulator(),
                 "observer" or "obs" or "observerpattern" => new ObserverSimulator(),
+                "command" or "cmd" or "commandpattern" => new CommandSimulator(),
                 _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, all.", nameof(key))
             };
         }
@@ -74,8 +79,9 @@ namespace Patterns.Simulator.Implementation.PublicAPI
         {
             try
             {
-                var normalized = NormalizeKey(key);
-                if (_guides.TryGetValue(normalized, out var guide))
+                string normalized = NormalizeKey(key);
+
+                if (normalized != null && _guides.TryGetValue(normalized, out string? guide) && guide != null)
                 {
                     System.Console.WriteLine("----- User Guide: " + normalized + " -----");
                     System.Console.WriteLine(guide);

@@ -78,3 +78,11 @@ Key points:
 - Observers register with a subject to receive updates.
 - Subject maintains a list of observers and notifies them of state changes.
 - Promotes loose coupling between subject and observers.
+
+## Command
+Intent: Encapsulate a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
+When to use: Use when you want to decouple the sender of a request from its receiver, or when you need to support undoable operations.
+Key points:
+- Command objects encapsulate all information needed to perform an action.
+- Supports undo/redo operations by storing state.
+- Promotes loose coupling between sender and receiver.

@@ -18,7 +18,8 @@ namespace Patterns.Simulator.Implementation
             Console.WriteLine("\n\n[System] Now simulating delegate-based Observer pattern behavior");
             SimulateDelegateBasedObserver();
             Console.WriteLine("\n\n[System] Now simulating standard .NET Observer pattern behavior");
-            SimulateStandardBehaviour();
+            // TBD: need to fix a bug in the standard implementation before enabling this simulation
+            // SimulateStandardBehaviour();
         }
 
         private void SimulateClassicBehaviour()

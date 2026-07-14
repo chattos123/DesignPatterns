@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Behavioral\Command\Diagram\" />
+    <Folder Include="Behavioral\Observer\Diagran\" />
+    <Folder Include="Creational\AbstractFactory\Diagran\" />
+    <Folder Include="Creational\Builder\Diagram\" />
+    <Folder Include="Creational\FactoryMethod\Diagram\" />
     <Folder Include="Creational\Singleton\Settings\" />
   </ItemGroup>
 
