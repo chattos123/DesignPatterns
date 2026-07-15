@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Dynamic;
 using Patterns.Behavioral.ChainofResponsibility.Implementation;
 using Patterns.Behavioral.ChainofResponsibility.Implementation.Data;
 using Patterns.Simulator.Interface;

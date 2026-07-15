@@ -45,7 +45,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 new DecoratorSimulator(),
                 new ObserverSimulator(),
                 new CommandSimulator(),
-                new ChainofResponsibilitySimulator()
+                new ChainofResponsibilitySimulator(),
+                new FacadeSimulator()
             };
 
             foreach (var s in sims)
@@ -73,7 +74,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "observer" or "obs" or "observerpattern" => new ObserverSimulator(),
                 "command" or "cmd" or "commandpattern" => new CommandSimulator(),
                 "chainofresponsibility" or "chain" or "chainofresp" => new ChainofResponsibilitySimulator(),
-                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, all.", nameof(key))
+                "facade" or "fac" or "facadepattern" => new FacadeSimulator(),
+                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, facade, all.", nameof(key))
             };
         }
 
