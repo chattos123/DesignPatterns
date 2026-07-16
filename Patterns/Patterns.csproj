@@ -16,6 +16,7 @@
     <Folder Include="Creational\FactoryMethod\Diagram\" />
     <Folder Include="Creational\Singleton\Settings\" />
     <Folder Include="Structural\Facade\Diagram\" />
+    <Folder Include="Structural\Flyweight\Diagram\" />
   </ItemGroup>
 
   <ItemGroup>

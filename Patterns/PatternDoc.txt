@@ -101,3 +101,10 @@ Key points:
 - Facade provides a simplified interface to a complex subsystem.
 - Clients interact with the facade instead of the subsystem directly.
 - Promotes loose coupling between clients and the subsystem.
+
+## Flyweight
+Intent: Use sharing to support large numbers of fine-grained objects efficiently.
+When to use: Use when you need to create a large number of similar objects that can share common state to save memory.
+Key points:
+- Flyweight objects share intrinsic state and store extrinsic state externally.
+- Use a factory to manage flyweight objects and ensure sharing.
