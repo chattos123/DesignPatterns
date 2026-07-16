@@ -15,9 +15,13 @@ using Patterns.Structural.Flyweight.Interface;
 namespace Patterns.Structural.Flyweight.implementation.ConcreteFlyweight
 {
     // The ConcreteFlyweight: Stores ONLY intrinsic state
-    internal class CharacterFormat: ICharacterFlyweight
+    internal sealed class CharacterFormat: ICharacterFlyweight
     {
         // Intrinsic State (Shared & Immutable)
+        // The entire Flyweight pattern relies on the guarantee that intrinsic state
+        // is immutable (read-only). If multiple contexts share a flyweight, and
+        // its state somehow changes, it will corrupt the state of every single object
+        // pointing to it. Hence it is a sealed class with read-only properties.
         public char Symbol { get; private set; }
         public string FontName { get; private set; }
         public int FontSize { get; private set; }
