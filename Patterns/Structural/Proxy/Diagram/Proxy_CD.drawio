@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="cAWCt1qhpQy3gpq6_a1p">
+    <mxGraphModel dx="1636" dy="516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IService&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ServiceOperation(Type): Type&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="160" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field: Type&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ServiceOperation(Type): Type&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="521" y="320" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- _realService: Service&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ServiceOperation(Type): Type&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="220" y="320" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-4" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;" edge="1" parent="1" source="ByctPHMSPlSi7kCvrzLa-3" target="ByctPHMSPlSi7kCvrzLa-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="390" y="530" as="sourcePoint" />
+            <mxPoint x="550" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-5" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;" edge="1" parent="1" source="ByctPHMSPlSi7kCvrzLa-2" target="ByctPHMSPlSi7kCvrzLa-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="490" as="sourcePoint" />
+            <mxPoint x="650" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-6" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ByctPHMSPlSi7kCvrzLa-2" target="ByctPHMSPlSi7kCvrzLa-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="531" y="520" as="sourcePoint" />
+            <mxPoint x="410" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-7" value="Checks...&lt;div&gt;_realService.ServiceOperation(Type)&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.rectCallout;dx=30;dy=15;boundedLbl=1;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="120" y="410" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-9" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ByctPHMSPlSi7kCvrzLa-8" target="ByctPHMSPlSi7kCvrzLa-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="260" as="sourcePoint" />
+            <mxPoint x="350" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ByctPHMSPlSi7kCvrzLa-10" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Proxy Design Pattern&lt;/h1&gt;&lt;p&gt;The &lt;b data-index-in-node=&quot;4&quot; data-path-to-node=&quot;0&quot;&gt;Proxy Design Pattern&lt;/b&gt; is a structural pattern that provides a placeholder, or surrogate, for another object. A proxy controls access to the original object, allowing you to perform actions either &lt;i data-index-in-node=&quot;199&quot; data-path-to-node=&quot;0&quot;&gt;before&lt;/i&gt; or &lt;i data-index-in-node=&quot;209&quot; data-path-to-node=&quot;0&quot;&gt;after&lt;/i&gt; the request reaches the target object.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="100" width="270" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

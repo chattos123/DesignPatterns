@@ -108,3 +108,10 @@ When to use: Use when you need to create a large number of similar objects that 
 Key points:
 - Flyweight objects share intrinsic state and store extrinsic state externally.
 - Use a factory to manage flyweight objects and ensure sharing.
+
+## Proxy
+Intent: Provide a surrogate or placeholder for another object to control access to it.
+When to use: Use when you want to control access to an object, add additional behavior, or defer the creation of an expensive object until it's needed.
+
+Key points:
+- Proxy implements the same interface as the real subject and controls access to it.
