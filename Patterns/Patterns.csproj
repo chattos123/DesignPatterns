@@ -9,8 +9,6 @@
   <ItemGroup>
     <Folder Include="Behavioral\ChainofResponsibility\Diagram\" />
     <Folder Include="Behavioral\ChainofResponsibility\interface\" />
-    <Folder Include="Behavioral\Command\Diagram\" />
-    <Folder Include="Behavioral\Observer\Diagram\" />
     <Folder Include="Creational\AbstractFactory\Diagram\" />
     <Folder Include="Creational\Builder\Diagram\" />
     <Folder Include="Creational\FactoryMethod\Diagram\" />
@@ -24,10 +22,10 @@
     <None Update="Behavioral\ChainofResponsibility\Description.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Behavioral\Command\Description.md">
+    <None Update="Behavioral\Command\Documentation\Description.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Behavioral\Observer\Description.md">
+    <None Update="Behavioral\Observer\Documentation\Description.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Creational\Singleton\Settings\loggerSettings.json">

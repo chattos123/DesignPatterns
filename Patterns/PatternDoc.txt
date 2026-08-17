@@ -115,3 +115,12 @@ When to use: Use when you want to control access to an object, add additional be
 
 Key points:
 - Proxy implements the same interface as the real subject and controls access to it.
+
+## Interpreter
+Intent: Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+When to use: Use when you have a simple language to interpret and you want to represent its grammar and provide an interpreter for it.
+
+Key points:
+- Define a class for each symbol in the grammar.
+- Use a context to store global information and pass it to the interpreter.
+

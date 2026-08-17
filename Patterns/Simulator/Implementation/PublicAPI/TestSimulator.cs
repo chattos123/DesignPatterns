@@ -48,7 +48,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 new ChainofResponsibilitySimulator(),
                 new FacadeSimulator(),
                 new FlyweightSimulator(),
-                new ProxySimulator()
+                new ProxySimulator(),
+                new InterpreterSimulator()
             };
 
             foreach (var s in sims)
@@ -79,7 +80,8 @@ namespace Patterns.Simulator.Implementation.PublicAPI
                 "facade" or "fac" or "facadepattern" => new FacadeSimulator(),
                 "flyweight" or "fly" or "flyweightpattern" => new FlyweightSimulator(),
                 "proxy" or "prox" or "proxypattern" => new ProxySimulator(),
-                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, facade, all.", nameof(key))
+                "interpreter" or "interp" or "interpreterpattern" => new InterpreterSimulator(),
+                _ => throw new System.ArgumentException($"Unknown simulator '{key}'. Valid: singleton, abstractfactory, builder, factory, prototype, adapter, composite, decorator, observer, facade, flyweight, proxy, interpreter, all.", nameof(key))
             };
         }
 
