@@ -40,18 +40,17 @@ classDiagram
         + string ToString()
     }
 
-    enum TokenType {
-        Number
-        Variable
-        Plus
-        Minus
-        Multiply
-        Divide
-        Modulo
-        OpenParenthesis
-        CloseParenthesis
-        EOF
-    }
+   note for TokenType "Enumeration values:
+    - Number
+    - Variable
+    - Plus
+    - Minus
+    - Multiply
+    - Divide
+    - Modulo
+    - OpenParenthesis
+    - CloseParenthesis
+    - EOF"
 
     Lexer --> Token
     Token --> TokenType
