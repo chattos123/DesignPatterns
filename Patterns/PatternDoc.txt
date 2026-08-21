@@ -124,3 +124,11 @@ Key points:
 - Define a class for each symbol in the grammar.
 - Use a context to store global information and pass it to the interpreter.
 
+### Iterator
+Intent: Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+When to use: Use when you want to traverse a collection without exposing its internal structure or when you want to provide multiple traversal methods.
+
+Key points:
+- Iterator provides a way to access elements of a collection sequentially.
+- Supports multiple traversal methods without exposing the underlying representation.
+- Promotes encapsulation and separation of concerns.

@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Behavioral\ChainofResponsibility\Diagram\" />
     <Folder Include="Behavioral\ChainofResponsibility\interface\" />
+    <Folder Include="Behavioral\Iterator\Typical\Interface\" />
     <Folder Include="Creational\AbstractFactory\Diagram\" />
     <Folder Include="Creational\Builder\Diagram\" />
     <Folder Include="Creational\FactoryMethod\Diagram\" />
